@@ -16,6 +16,10 @@ In SpoitableToolKit, open Plugins and add this repository's URL.
 - `MyPlugin/web/` — the plugin's page
 - `MyPlugin/locales/` — its texts
 
+The build generates `ModuleInfo` (`Id`, `Name`, `Version` from the csproj). `ModuleInfo.ModuleDirectory` is the
+folder the app loaded the plugin from; open a file the plugin ships with
+`Path.Combine(ModuleInfo.ModuleDirectory, "some/file")` (read only: write to `IToolHost.DataDirectory`).
+
 ## Release
 
 ```
