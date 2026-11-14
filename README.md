@@ -12,8 +12,8 @@ In SpoitableToolKit, open Plugins and add this repository's URL.
 ## Layout
 
 - `MyPlugin/MyPlugin.csproj` — the plugin's Id (`SpoitablePluginId`), name and version
-- `MyPlugin/MyPlugin.cs` — the entry class (`IToolPlugin`)
-- `MyPlugin/web/` — the plugin's page
+- `MyPlugin/MyPlugin.cs` — the entry class (`IToolPlugin`, and `IUiEndpoint` so that the page is listed in the sidebar)
+- `MyPlugin/web/` — the plugin's page (`index.html` is the entry; it loads `/_host/theme.css` and `/_host/bridge.js` from the app)
 - `MyPlugin/locales/` — its texts
 
 The build generates `ModuleInfo` (`Id`, `Name`, `Version` from the csproj). `ModuleInfo.ModuleDirectory` is the
